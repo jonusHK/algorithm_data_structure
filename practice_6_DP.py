@@ -12,10 +12,12 @@
 ###
 
 def solution(N, number):
-  # s = [(5), (55, ...), (555, ...), ... , (55555555, ...)]
+  # s = [{5}, {55, ...}, {555, ...}, ... , {55555555, ...}]
   s = [set() for x in range(8)]
   for i, x in enumerate(s, start=1):
     x.add(int(str(N) * i))
+    if i == 0 and number == x:
+      return 1
 
   for i in range(1, len(s)):
     for j in range(i):
