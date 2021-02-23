@@ -26,6 +26,6 @@ def solution(tickets):
             routes[top] = routes[top][:-1]
     return path[::-1]
 
-print(solution([["ICN", "SFO"], ["ICN", "ATL"], ["STL", "ATL"], ["ATL", "ICN"], ["ATL", "SFO"]]))
-# 출력값 : ["ICN", "ATL", "ICN", "SFO", "ATL", "STL"]
+print(solution([["ICN", "SFO"], ["ICN", "ATL"], ["SFO", "ATL"], ["ATL", "ICN"], ["ATL", "SFO"]]))
+# 출력값 : ["ICN", "ATL", "ICN", "SFO", "ATL", "SFO"]
     
