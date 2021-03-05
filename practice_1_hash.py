@@ -1,4 +1,8 @@
-# 완주하지 못한 선수 찾기
+### 완주하지 못한 선수 찾기
+# 단 한명의 선수 제외하고 모든 선수가 마라톤 완주
+# 마라톤에 참여한 선수들의 이름이 담긴 배열 participant와 완주한 선수들의 이름이 담긴 배열 completion이 주어질 때,
+# 완주하지 못한 선수의 이름을 return
+###
 
 def solution(participant, completion):
   d = {}
