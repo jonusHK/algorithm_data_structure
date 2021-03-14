@@ -29,9 +29,10 @@ def solution(words, queries):
         reversed_data[i].sort()
 
     for q in queries: # 쿼리를 하나씩 확인하며 처리
-        if q[0] != '?':
+        if q[0] != '?': # 접미사에 와일드 카드가 붙은 경우
             res = count_by_range(data[len(q)], q.replace('?', 'a'), q.replace('?', 'z'))
-        else:
+        else: # 접두사에 와일드 카드가 붙은 경우
             res = count_by_range(reversed_data[len(q)], q[::-1].replace('?', 'a'), q[::-1].replace('?', 'z'))
+        # 검색된 단어의 개수를 저장
         answer.append(res)
     return answer
