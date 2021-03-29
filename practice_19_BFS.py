@@ -13,12 +13,10 @@ def checker(num):
 
 def solution(numbers):
     answer = 0
-
     rst = set()
     for v in range(1, len(numbers) + 1):
-        converted = list(map(convert_to_number, list(permutations(list(numbers), v))))
-        for c in converted:
-            rst.add(c)
+        rst |= set(map(convert_to_number, permutations(list(numbers), v)))
+
     for num in rst:
         if checker(num):
             answer += 1
@@ -26,3 +24,6 @@ def solution(numbers):
     return answer
 
 print(solution("17"))
+
+
+
