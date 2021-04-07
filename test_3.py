@@ -3,8 +3,7 @@ def solution(U, L, C):
     check_li = [False for _ in range(len(C))]
     for idx, val in enumerate(C):
         if val == 2:
-            rst_li[0][idx] = '1'
-            rst_li[1][idx] = '1'
+            rst_li[0][idx], rst_li[1][idx] = '1', '1'
             check_li[idx] = True
             U -= 1
             L -= 1
