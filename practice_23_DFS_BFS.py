@@ -6,6 +6,7 @@ def checked(stack, li):
         return False
     return True
 
+
 def find_parent(dict, child_node):
     for k, v in dict.items():
         for tu in v:
@@ -54,19 +55,14 @@ def solution(first_info, connected):
             value = dict.get(con[0], [])
             value.append([con[1], False])
             dict.update({ con[0]: sorted(value, key=lambda v: v[0]) })
-        
-        print('dict - ', dict)
 
         dfs_stack = calc_dfs(dict, first_node)
         # bfs_queue = calc_bfs(dict, first_node)
         print(' '.join([str(dfs) for dfs in dfs_stack]))
         # print(' '.join(bfs_queue))
-            
         
     except Exception as e:
         raise e
-
-
 
 
 if __name__ == '__main__':
