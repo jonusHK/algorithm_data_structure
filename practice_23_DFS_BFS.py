@@ -76,17 +76,14 @@ def solution(first_info, connected):
 
 
 if __name__ == '__main__':
-    # first_info  = map(int, sys.stdin.read().split())
-    # connected = []
-    # i = 0
-    # while first_info[1] > i:
-    #     connected.append(tuple(map(int, sys.stdin.read().split())))
-    #     i += 1
+    first_info  = list(map(int, sys.stdin.readline().split()))
+    connected = []
+    i = 0
+    while first_info[1] > i:
+        connected.append(tuple(map(int, sys.stdin.readline().split())))
+        i += 1
 
-    # first_info = [4, 5, 1]
-    # connected = [(1, 2), (1, 3), (1, 4), (2, 4), (3, 4)]
-
-    first_info = [8, 8, 1]
-    connected = [(1, 2), (1, 3), (1, 4), (2, 5), (2, 6), (3, 7), (5, 8), (8, 6)]
+    # first_info = [8, 8, 1]
+    # connected = [(1, 2), (1, 3), (1, 4), (2, 5), (2, 6), (3, 7), (5, 8), (8, 6)]
     solution(first_info, connected)
     
