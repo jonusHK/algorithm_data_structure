@@ -44,7 +44,17 @@ def calc_dfs(dict, first_node):
 
 
 def calc_bfs(dict, first_node):
-    pass
+    bfs_queue = []
+    bfs_queue.append(first_node)
+    pointer = 0
+    while len(bfs_queue) > pointer:
+        next_node = bfs_queue[pointer]
+        if dict.get(next_node, False):
+            for child_node in dict[next_node]:
+                if child_node[0] not in bfs_queue:
+                    bfs_queue.append(child_node[0])
+        pointer += 1
+    return bfs_queue
 
 
 def solution(first_info, connected):
@@ -57,9 +67,9 @@ def solution(first_info, connected):
             dict.update({ con[0]: sorted(value, key=lambda v: v[0]) })
 
         dfs_stack = calc_dfs(dict, first_node)
-        # bfs_queue = calc_bfs(dict, first_node)
-        print(' '.join([str(dfs) for dfs in dfs_stack]))
-        # print(' '.join(bfs_queue))
+        bfs_queue = calc_bfs(dict, first_node)
+        print('dfs --- ', ' '.join([str(dfs) for dfs in dfs_stack]))
+        print('bfs --- ', ' '.join([str(bfs) for bfs in bfs_queue]))
         
     except Exception as e:
         raise e
