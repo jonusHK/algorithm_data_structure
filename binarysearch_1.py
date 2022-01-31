@@ -1,5 +1,6 @@
 import sys
 
+
 def binary_search(li, num, st, ed):
     if st > ed:
         return 0
