@@ -44,7 +44,7 @@ def solution():
     except Exception as e:
         return e
 
-
     return cnt
+
 
 print(solution())
