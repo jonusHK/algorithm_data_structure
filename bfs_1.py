@@ -3,6 +3,7 @@ from collections import deque
 from itertools import combinations
 from copy import deepcopy
 
+
 def get_new_board(n, m, board):
     new_board = [[1 for _ in range(m + 2)] for _ in range(n + 2)]
 
@@ -26,7 +27,7 @@ def set_virus_to_board(n, m, board, wall_pos_case):
     while q:
         pos = q.popleft()
         dx = [-1, 1, 0, 0]
-        dy = [0, 0 , -1, 1]
+        dy = [0, 0, -1, 1]
 
         for i in range(4):
             x = pos[0] + dx[i]
