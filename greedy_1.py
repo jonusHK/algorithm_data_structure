@@ -7,14 +7,11 @@ def solution():
 
     li.sort()
 
-    result1 = 0
-    for idx1, _ in enumerate(li):
-        result2 = 0
+    result = 0
+    for idx1 in range(n):
         for idx2 in range(idx1 + 1):
-            result2 += li[idx2]
-        
-        result1 += result2
+            result += li[idx2]
     
-    print(result1)
+    return result
 
-solution()
+print(solution())
