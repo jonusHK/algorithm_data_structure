@@ -10,7 +10,6 @@ n, m = map(int, sys.stdin.readline().split())
 array = [[] for _ in range(n + 1)]
 indegree = [0 for _ in range(n + 1)]
 
-test = [(3, 1), (4, 2), (5, 1), (6, 3)]
 for i in range(m):
     x, y = map(int, sys.stdin.readline().split())
     array[x].append(y)
