@@ -1,3 +1,8 @@
+"""
+백준 - 바이러스
+"""
+
+
 from collections import defaultdict, deque
 
 n = int(input())

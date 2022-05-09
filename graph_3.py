@@ -1,3 +1,7 @@
+"""
+백준 - 유기농 배추 (BFS, DFS)
+"""
+
 import sys
 sys.setrecursionlimit(10 ** 4)  # 기본적으로 재귀 횟수를 1000 정도로 설정해놓음
 
