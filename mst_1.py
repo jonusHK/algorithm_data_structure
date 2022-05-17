@@ -1,3 +1,7 @@
+"""
+백준 - 우주신과의 교감
+"""
+
 from itertools import permutations
 from math import sqrt
 
