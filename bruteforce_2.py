@@ -1,6 +1,3 @@
-from itertools import combinations
-
-
 def solution():
     n, m = list(map(int, input().split(' ')))
     data = list(map(int, input().split(' ')))

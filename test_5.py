@@ -1,5 +1,6 @@
 from bisect import bisect_right
 
+
 def solution(A):
     try:
         A.sort()    

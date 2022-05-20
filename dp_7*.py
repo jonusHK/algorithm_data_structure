@@ -2,7 +2,6 @@
 백준 - 기타리스트
 """
 
-
 n, s, m = map(int, input().split())
 
 array = list(map(int, input().split()))

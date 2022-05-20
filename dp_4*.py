@@ -2,7 +2,6 @@
 백준 - 평범한 배낭
 """
 
-
 n, k = map(int, input().split())
 
 dp = [[0] * (k + 1) for _ in range(n + 1)]
