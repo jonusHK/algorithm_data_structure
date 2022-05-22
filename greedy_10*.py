@@ -1,3 +1,7 @@
+"""
+백준 - 배
+"""
+
 import sys
 
 n = int(input())
