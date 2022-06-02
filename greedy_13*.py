@@ -1,3 +1,7 @@
+"""
+백준 - 컵라면
+"""
+
 import heapq
 import sys
 
@@ -13,7 +17,7 @@ for _ in range(n):
 array.sort()
 
 q = []
-for (d, cnt) in array:
+for d, cnt in array:
     heapq.heappush(q, cnt)
     if len(q) > d:
         heapq.heappop(q)
