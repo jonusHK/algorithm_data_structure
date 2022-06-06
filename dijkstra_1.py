@@ -1,6 +1,7 @@
 """
 백준 - 해킹
 """
+
 import heapq
 
 
