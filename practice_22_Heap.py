@@ -5,6 +5,7 @@
 ###
 import heapq
 
+
 def solution(operations):
     min_heap = []
     heapq.heapify(min_heap)

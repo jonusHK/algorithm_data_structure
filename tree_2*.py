@@ -2,10 +2,11 @@
 백준 - 트리의 높이와 너비
 """
 
+
 class Node:
-    def __init__(self, number, left_node, right_node):
+    def __init__(self, num, left_node, right_node):
         self.parent = -1
-        self.number = number
+        self.num = num
         self.left_node = left_node
         self.right_node = right_node
 
