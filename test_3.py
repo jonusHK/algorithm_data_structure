@@ -11,7 +11,7 @@ def solution(U, L, C):
             check_li[idx] = True
 
     for idx, val in enumerate(check_li):
-        if val == False:
+        if val is False:
             if U > 0:
                 rst_li[0][idx] = '1'
                 U -= 1
@@ -25,9 +25,10 @@ def solution(U, L, C):
     rst = ''
     for i in range(len(rst_li)):
         rst += ''.join(rst_li[i])
-        if (i != len(rst_li) - 1):
+        if i != len(rst_li) - 1:
             rst += ','
 
     return rst
+
 
 print(solution(2, 3, [0, 0, 1, 1, 2]))

@@ -1,16 +1,18 @@
 def get_ext(file_name):
     return file_name.split('.')[-1]
 
+
 def get_size(file_size):
     return int(file_size[:-1])
 
-def solution(S):
+
+def solution(str):
     try:
         music_ext = ['mp3', 'aac', 'flac']
         image_ext = ['jpg', 'bmp', 'gif']
         movie_ext = ['mp4', 'avi', 'mkv']
 
-        str_li = S.split()
+        str_li = str.split()
         print('str_li - ', str_li)
         music_size = 0
         image_size = 0

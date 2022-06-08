@@ -1,13 +1,13 @@
-def solution(S):
+def solution(str):
     stack = []
-    operations = S.split()
+    operations = str.split()
     try:
         for op in operations:
-            if op.isdigit() == True:
+            if op.isdigit():
                 stack.append(int(op))
             elif op == 'POP':
                 stack.pop()
-            elif op == 'DUP' :
+            elif op == 'DUP':
                 top = stack.pop()
                 stack.append(top)
                 stack.append(top)
@@ -23,5 +23,6 @@ def solution(S):
         return stack.pop()
     except IndexError as e:
         raise e
-    
+
+
 print(solution('4 5 6 - 7 +'))
