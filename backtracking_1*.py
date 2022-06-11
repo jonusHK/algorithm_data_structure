@@ -2,7 +2,6 @@
 백준 - N-Queen
 """
 
-
 def check(cur_row):
     for _r in range(cur_row):
         # 위아래에 존재하는 경우
