@@ -1,3 +1,7 @@
+"""
+백준 - 걸그룹 마스터 준석이
+"""
+
 from collections import defaultdict
 
 n, m = map(int, input().split())
