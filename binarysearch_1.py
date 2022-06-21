@@ -17,6 +17,7 @@ def binary_search(li, num, st, ed):
     else:
         return binary_search(li, num, st, mid - 1)
 
+
 def solution():
     n = int(sys.stdin.readline())
     n_li = list(map(int, sys.stdin.readline().split()))
@@ -26,5 +27,6 @@ def solution():
     n_li.sort()
     for m_num in m_li:
         print(binary_search(n_li, m_num, 0, n - 1))
+
 
 solution()
