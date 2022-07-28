@@ -1,3 +1,7 @@
+"""
+백준 - 늑대와 양
+"""
+
 r, c = map(int, input().split())
 m = []
 for _ in range(r):
