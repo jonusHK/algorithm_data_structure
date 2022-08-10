@@ -1,7 +1,9 @@
+"""
+백준 - 유기농 배추
+"""
+
 from collections import deque
 from typing import List
-
-dx, dy = [-1, 0, 1, 0], [0, 1, 0, -1]
 
 
 def bfs(_x: int, _y: int):
@@ -19,8 +21,9 @@ def bfs(_x: int, _y: int):
                 q.append((new_x, new_y))
 
 
-t = int(input())
+dx, dy = [-1, 0, 1, 0], [0, 1, 0, -1]
 rst = []
+t = int(input())
 for _ in range(t):
     m, n, k = map(int, input().split())
     mapping: List[List[int]] = [[0 for _ in range(m)] for _ in range(n)]
