@@ -1,3 +1,8 @@
+"""
+백준 - Mooyo Mooyo
+"""
+
+
 from collections import deque
 
 dx, dy = [-1, 0, 1, 0], [0, 1, 0, -1]
