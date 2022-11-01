@@ -1,3 +1,7 @@
+"""
+백준 - 정수 삼각형
+"""
+
 n = int(input())
 array = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
 dp = [[0 for _ in range(n + 1)] for i in range(n + 1)]
