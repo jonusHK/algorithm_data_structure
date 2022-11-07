@@ -25,10 +25,13 @@ def nxt(state: list):
     tmp[5] = state[3] + state[4] + state[6]
     tmp[6] = state[5] + state[7]
     tmp[7] = state[4] + state[6]
+
+    for _i in range(8):
+        tmp[_i] %= 1000000007
     return tmp
 
 
 for i in range(int(input())):
     dp = nxt(dp)
 
-print(dp[0] % 1000000007)
+print(dp[0])
