@@ -17,8 +17,8 @@ def flip(_array: List[List[int]], x: int, y: int, length=3):
 
 
 cnt = 0
-for i in range(n - 2): # 0
-    for j in range(m - 2): # 0 1
+for i in range(n - 2):
+    for j in range(m - 2):
         if array_a[i][j] != array_b[i][j]:
             flip(array_a, i, j)
             cnt += 1
