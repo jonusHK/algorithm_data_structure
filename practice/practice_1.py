@@ -1,5 +1,5 @@
 """
-백준 - N-Queen (3344) -> 백트래킹 알고리즘 사용하면 시간 및 메모리 초과
+백준 - N-Queen (3344) -> 특별한 알고리즘 사용 필수 (백트래킹 알고리즘 사용하면 시간 및 메모리 초과)
 """
 
 n = int(input())
@@ -33,7 +33,7 @@ def is_valid(x: int, y: int):
     return True
 
 
-def dst(row: int):
+def dfs(row: int):
     if row == n:
         return
 
@@ -41,7 +41,7 @@ def dst(row: int):
     for col in range(n):
         if is_valid(row, col):
             array[row][col] = 1
-            dst(row + 1)
+            dfs(row + 1)
             if checked_row[-1] != 1:
                 array[row][col] = 0
             else:
@@ -50,7 +50,7 @@ def dst(row: int):
     checked_row[row] = 0
 
 
-dst(0)
+dfs(0)
 
 for a in array:
     for i in range(n):
