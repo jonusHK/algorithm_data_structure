@@ -2,10 +2,10 @@
 최소 신장 트리 (프림 알고리즘)
 """
 
-# 중복된 노드에 연결된 간선은 제거
 import heapq
 from collections import defaultdict
 
+# 중복된 노드에 연결된 간선은 제거
 graph = [
     (7, 'A', 'B'), (5, 'A', 'D'),
     (8, 'B', 'C'), (9, 'B', 'D'), (7, 'B', 'E'),
