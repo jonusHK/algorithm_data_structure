@@ -16,14 +16,13 @@ for i in range(1, len(n) + 1):
         if m[i-1] == n[j-1]:
             dp[i][j]: Tuple[int, Tuple[int, int]] = (dp[i-1][j-1][0] + 1, (i - 1, j - 1))
         else:
-            val, ref = None, None
             if dp[i-1][j][0] >= dp[i][j-1][0]:
                 val = dp[i-1][j][0]
-                ref = (i - 1, j)
+                ref = i - 1, j
             else:
                 val = dp[i][j-1][0]
-                ref = (i, j - 1)
-            dp[i][j]: Tuple[int, Tuple[int, int]] = (val, ref)
+                ref = i, j - 1
+            dp[i][j]: Tuple[int, Tuple[int, int]] = val, ref
 
 
 def get_track(_ref: Tuple[int, int]):
