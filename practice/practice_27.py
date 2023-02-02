@@ -15,7 +15,6 @@ def dfs(x: int, y: int, _visited: Set[str], _cnt: int):
 
     _cnt += 1
     _visited.add(board[x][y])
-    checked[x][y] = 1
     max_cnt = max(_cnt, max_cnt)
 
     for idx in range(4):
@@ -27,13 +26,8 @@ def dfs(x: int, y: int, _visited: Set[str], _cnt: int):
     _visited.remove(board[x][y])
 
 
-checked = [[0] * c for _ in range(r)]
 visited = set()
 
-for i in range(r):
-    for j in range(c):
-        if checked[i][j] == 1:
-            continue
-        dfs(0, 0, visited, 0)
+dfs(0, 0, visited, 0)
 
 print(max_cnt)
