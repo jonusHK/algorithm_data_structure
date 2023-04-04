@@ -17,14 +17,14 @@ def find_path(rectangle, cur_x, cur_y):
         half_x = cur_x + dx[i] / 2
         half_y = cur_y + dy[i] / 2
 
-        is_not_inner = True
-        is_in_line = False
+        is_inner = False
+        is_line = False
         for r in rectangle:
             if (
                 (half_x > r[0] and half_y > r[1]) and
                 (half_x < r[2] and half_y < r[3])
             ):
-                is_not_inner = False
+                is_inner = True
                 break
 
             check = 0
@@ -36,9 +36,9 @@ def find_path(rectangle, cur_x, cur_y):
                     check += 1
 
             if check == 2:
-                is_in_line = True
+                is_line = True
 
-        if is_not_inner and is_in_line:
+        if not is_inner and is_line:
             yield x, y
 
 
