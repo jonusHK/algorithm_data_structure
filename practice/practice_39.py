@@ -1,5 +1,3 @@
-from copy import deepcopy
-
 coins_arr = []
 m = 0
 n = 0
@@ -28,14 +26,13 @@ def dfs(first, second, visited, cnt):
         max_cnt = max(max_cnt, cnt)
         return
 
-    copy_visited = deepcopy(visited)
-    for x, y in route(first, copy_visited):
-        copy_visited[x][y] = 1
-        for _x, _y in route(second, copy_visited):
-            copy_visited[_x][_y] = 1
-            dfs((x, y), (_x, _y), copy_visited, cnt)
-            copy_visited[_x][_y] = 0
-        copy_visited[x][y] = 0
+    for x, y in route(first, visited):
+        visited[x][y] = 1
+        for _x, _y in route(second, visited):
+            visited[_x][_y] = 1
+            dfs((x, y), (_x, _y), visited, cnt)
+            visited[_x][_y] = 0
+        visited[x][y] = 0
 
 
 def solution(coins):
