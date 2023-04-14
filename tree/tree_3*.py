@@ -3,7 +3,7 @@
 """
 
 
-def convertBinary(value):
+def convert_binary(value):
     binary = ''
     while value != 0:
         value, left = divmod(value, 2)
@@ -44,7 +44,7 @@ def dfs(start, end, binary):
 def solution(numbers):
     answer = []
     for num in numbers:
-        binary = convertBinary(num)
+        binary = convert_binary(num)
         if dfs(0, len(binary) - 1, binary):
             answer.append(1)
         else:
