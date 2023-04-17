@@ -12,8 +12,8 @@ def solution(n):
             continue
 
         dp[i] = (dp[i-1] + dp[i-2]) % 10007
-        if i == n:
-            return dp[i]
+
+    return dp[n]
 
 
 if __name__ == "__main__":
