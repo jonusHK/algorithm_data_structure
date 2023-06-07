@@ -4,13 +4,14 @@
 
 
 def solution(targets):
-    targets.sort(key=lambda x: (x[1], x[0]))
+    targets.sort(key=lambda x: x[1])
 
-    cnt = p = 0
+    cnt = 0
+    ptr = 0
     for t in targets:
-        if t[0] >= p:
+        if t[0] >= ptr:
             cnt += 1
-            p = t[1]
+            ptr = t[1]
 
     return cnt
 
