@@ -12,7 +12,7 @@ def solution(N, M, arr_m, arr_c):
         byte = arr_m[i]
         cost = arr_c[i]
 
-        for j in range(1, sum(arr_c) + 1):
+        for j in range(sum(arr_c) + 1):
             if j < cost:
                 dp[i][j] = dp[i-1][j]
             else:
