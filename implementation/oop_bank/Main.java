@@ -98,8 +98,6 @@ class CheckingAccount extends Account {
             return;
         }
 
-        System.out.println("CheckingAccount.monthEnd() - " + balance);
-
         if (balance < 0) {
             long overdrawn = -balance;                // 501
             balance -= (overdrawn + 99) / 100;        // 501+99 = 600, /100 = 6
